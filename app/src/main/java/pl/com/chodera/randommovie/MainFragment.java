@@ -45,7 +45,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -92,6 +91,7 @@ public class MainFragment extends BrowseFragment {
   }
 
   private void loadRows() {
+//    https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=86ad26ad1a6c9ce9b07453fde1ca740d
     List<Movie> list = MovieList.setupMovies();
 
     mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
