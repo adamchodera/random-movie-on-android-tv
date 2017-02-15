@@ -56,7 +56,7 @@ public class MainFragment extends BrowseFragment {
   private static final int BACKGROUND_UPDATE_DELAY = 300;
   private static final int GRID_ITEM_WIDTH = 200;
   private static final int GRID_ITEM_HEIGHT = 200;
-  private static final int NUM_ROWS = 6;
+  private static final int NUM_ROWS = MovieGenres.MOVIE_GENRE.length;
   private static final int NUM_COLS = 15;
 
   private final Handler mHandler = new Handler();
@@ -96,7 +96,7 @@ public class MainFragment extends BrowseFragment {
     + vote_average.gte
     + with_genres */
     // TODO implement above; check documentations for more details https://developers.themoviedb.org/3/discover
-    List<Movie> list = MovieList.setupMovies();
+    List<Movie> list = MovieGenres.setupMovies();
 
     mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
     CardPresenter cardPresenter = new CardPresenter();
@@ -110,7 +110,7 @@ public class MainFragment extends BrowseFragment {
       for (int j = 0; j < NUM_COLS; j++) {
         listRowAdapter.add(list.get(j % 5));
       }
-      HeaderItem header = new HeaderItem(i, MovieList.MOVIE_CATEGORY[i]);
+      HeaderItem header = new HeaderItem(i, MovieGenres.MOVIE_GENRE[i]);
       mRowsAdapter.add(new ListRow(header, listRowAdapter));
     }
 

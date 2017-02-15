@@ -188,7 +188,7 @@ public class MovieDetailsFragment extends DetailsFragment {
 
   private void setupMovieListRow() {
     String subcategories[] = { getString(R.string.related_movies) };
-    List<Movie> list = MovieList.list;
+    List<Movie> list = MovieGenres.list;
 
     Collections.shuffle(list);
     ArrayObjectAdapter listRowAdapter = new ArrayObjectAdapter(new CardPresenter());

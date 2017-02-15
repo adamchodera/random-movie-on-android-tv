@@ -3,14 +3,18 @@ package pl.com.chodera.randommovie;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class MovieList {
-  public static final String MOVIE_CATEGORY[] = {
-      "Category Zero",
-      "Category One",
-      "Category Two",
-      "Category Three",
-      "Category Four",
-      "Category Five",
+public final class MovieGenres {
+  public static final String MOVIE_GENRE[] = {
+      "Action",
+      "Comedy",
+      "Crime",
+      "Documentary",
+      "Drama",
+      "Family",
+      "Horror",
+      "Romance",
+      "Science Fiction",
+      "Thriller",
   };
 
   public static List<Movie> list;
