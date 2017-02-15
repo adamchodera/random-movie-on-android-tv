@@ -91,7 +91,11 @@ public class MainFragment extends BrowseFragment {
   }
 
   private void loadRows() {
-//    https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=86ad26ad1a6c9ce9b07453fde1ca740d
+    /*    https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc
+    + api_key
+    + vote_average.gte
+    + with_genres */
+    // TODO implement above; check documentations for more details https://developers.themoviedb.org/3/discover
     List<Movie> list = MovieList.setupMovies();
 
     mRowsAdapter = new ArrayObjectAdapter(new ListRowPresenter());
